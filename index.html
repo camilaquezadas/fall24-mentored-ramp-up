@@ -1,11 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="./styles.css" rel="stylesheet" />
+    <script src="script.js"></script>
+    <title>feeling hungry in san jose</title>
 </head>
 <body>
     
+    <div id="title_page">
+        <div class="title">
+            <h1><b>feeling hungry in san jose?</b></h1>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="typed-content">
+            <p>get a food rec based on what you're feeling!</p>
+        </div>
+    </div>
+
+    
+    <div class="start">
+        <button onclick="transition_question('title_page', 'question_one')">Take the test!</button>
+    </div>
+
+    
+    <div id="question_one">
+        <div class="question" id="q1"><h2>question 1</h2></div>
+        <div id="firstq" class="instructions">first off, savory meal or sweet treat?</div>
+        <div class="options">
+            <button onclick="updateValues(100, 0, 0); transition_question('question_one', 'question_two')">sweet treat</button>
+            <button onclick="updateValues(-100, 0, 0); transition_question('question_one', 'question_two')">savory meal</button>
+        </div>
+    </div>
+
+    <div id="question_two">
+        <div class="question" id="q2"><h2>question 2</h2></div>
+        <div id="secondq" class="instructions">ooo looking for an insta-worthy spot?</div>
+        <div class="options">
+            <button onclick="updateValues(0, 100, 0); transition_question('question_two', 'question_three')">insta-worthy!!</button>
+            <button onclick="updateValues(0, -100, 0); transition_question('question_two', 'question_three')">girl just give me the damn food</button>
+        </div>
+    </div>
+
+    
+    <div id="question_three">
+        <div class="question" id="q3"><h2>question 3</h2></div>
+        <div id="thirdq" class="instructions">how much are you willing to spend?</div>
+        <div class="options">
+            <button onclick="updateValues(0, 0, 100); get_description(); transition_question('question_three', 'result')">a lot!</button>
+            <button onclick="updateValues(0, 0, -100); get_description(); transition_question('question_three', 'result')">um i have two dollars to my name</button>
+        </div>
+    </div>
+
+    <div id="result">
+        <h1>you should head to:</h1>
+        <h2 id="restaurant_name"></h2>
+        <img id="restaurant_image" src="" alt="Restaurant Image" style="max-width: 300px; margin: 20px auto; display: none;" />
+        <div class="flexible">
+            <div id="color_strip"></div>
+        </div>
+    </div>
+
+    <div class="description_of_results" id="con-azucar">
+        <p>eat some yummy conchas and drink some Mexican-inspired coffees while enjoying all the photo ops!</p>
+    </div>
+    <div class="description_of_results" id="smitten-ice-cream">
+        <p>enjoy yummy flavors like cookie dough with pretzels and chocolate chips while taking a stroll down picturesque santana row!</p>
+    </div>
+    <div class="description_of_results" id="la-original-paleteria-y-niveria">
+        <p>from mexican raspados to esquites, the variation of Mexican treats is insane! You're bound to like everything you try!</p>
+    </div>
+    <div class="description_of_results" id="pastelaria">
+        <p>a true taste of portugal with their yummy malasadas and pastries from their award-winning chefs!</p>
+    </div>
+    <div class="description_of_results" id="k-cafe-patisserie-&-tea-house">
+        <p>enjoy the good asian-french fusion cuisine while falling in love with the flowers and chandeliers all over the cafe!</p>
+    </div>
+    <div class="description_of_results" id="el-jardin">
+        <p>nestled in the middle of santana row, the good music and mexican fusion cuisine makes for a great dinner!</p>
+    </div>
+    <div class="description_of_results" id="tacos-3-reyes">
+        <p>tacos so good they transport you to mexico.</p>
+    </div>
+    <div class="description_of_results" id="d-d-delight">
+        <p>named one of the best restaurants in san jose, this asian fusion place is sure to win you over!</p>
+    </div>
 </body>
 </html>

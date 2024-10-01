@@ -1,0 +1,170 @@
+body {
+    font-family: "Courier New", Courier, monospace;
+    background-image: url("https://wallpapercave.com/wp/wp3731450.jpg");
+    background-color: rgb(242, 179, 189);
+    background-position: center;
+
+    background-repeat: no-repeat;
+    padding-top: 10em;
+    align-items: center;
+}
+
+/* Question Divs */
+#title_page {
+    display: block;
+}
+
+#question_one, #question_two, #question_three, #question_four, #question_five {
+    display: none;
+}
+
+/* Result display */
+#result {
+    text-align: center;
+    animation: fadeInFirst 2s;
+    display: none;
+}
+
+.flexible {
+    display: flex;
+    justify-content: center;
+}
+
+#color_strip {
+    height: 100px;
+    width: 100px;
+    animation: fadeInDelay 3s;
+}
+
+/* Description display */
+.description_of_results {
+    margin: 50px;
+    animation: fadeInDelay 3s;
+    font-family: "Courier New", Courier, monospace;
+    display: none;
+}
+
+#white_description, #high_red_description, #high_green_description, #high_blue_description,
+#med_red_description, #med_green_description, #med_blue_description,
+#low_red_description, #low_green_description, #low_blue_description {
+    display: none;
+}
+
+/* Title Stuff */
+.container {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    text-align: center;
+    animation: fadeInFirst 2s;
+}
+
+.instructions {
+    overflow: hidden;
+    border-right: .15em solid rgb(16, 53, 132);
+    white-space: nowrap;
+    margin: 0 auto;
+}
+
+/* Question stuff */
+#firstq, #secondq, #thirdq, #fourthq, #fifthq {
+    color: rgb(16, 53, 132);
+    height: 30px;
+    line-height: 30px;
+    animation: type 5s steps(40) forwards; /* Stops after typing */
+}
+
+.typed-content {
+    overflow: hidden;
+    border-right: .15em solid rgb(16, 53, 132); /* Blinking cursor during typing */
+    white-space: nowrap;
+    margin: 0 auto;
+    width: 535px;
+    height: 35px;
+    line-height: 0px;
+    animation: type 5s steps(40) forwards, blink-cursor .75s step-end infinite; /* Stop after last char */
+}
+
+@keyframes type {
+    from { width: 0; }
+    100% { width: 530px; } /* Set the width to match the final text width */
+}
+
+@keyframes blink-cursor {
+    from, to { border-color: transparent; }
+    50% { border-color: rgb(16, 53, 132); }
+}
+
+.question {
+    text-align: center;
+    animation: fadeInFirst 2s;
+    color: rgb(16, 53, 132);
+}
+
+/* Actual words */
+h1 {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 50px;
+    color: rgb(16, 53, 132);
+}
+
+h2 {
+    font-size: 25px;
+    color: rgb(16, 53, 132);
+    font-family: "Courier New", Courier, monospace;
+}
+
+p {
+    font-size: 20px;
+    color: rgb(16, 53, 132);
+    text-align: center;
+}
+
+/* Buttons */
+.options, .start {
+    padding: 10px;
+    text-align: center;
+    animation: fadeInDelay 10s;
+    color: rgb(16, 53, 132);
+}
+
+.button-container {
+    text-align: center;
+    padding: 10px;
+    color: rgb(16, 53, 132);
+}
+
+.button {
+    background-color: aliceblue;
+    font-family: "Courier New", Courier, monospace;
+    text-align: center;
+    outline: rgb(16, 53, 132);;
+    animation: fadeInDelay 10s;
+}
+
+/* Animations */
+@keyframes type {
+    from { width: 0; }
+    25% { width: 0; }
+    100% { width: 530px; }
+}
+
+@keyframes blink-cursor {
+    from, to { border-color: transparent; }
+    50% { border-color: rgb(16, 53, 132); }
+}
+
+@keyframes fadeInFirst {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDelay {
+    from { opacity: 0; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
