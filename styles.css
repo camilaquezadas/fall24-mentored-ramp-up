@@ -75,28 +75,23 @@ body {
     color: rgb(16, 53, 132);
     height: 30px;
     line-height: 30px;
-    animation: type 5s steps(40) forwards; /* Stops after typing */
+    animation: type 5s steps(40) forwards; /* Stop animation after typing */
 }
 
 .typed-content {
     overflow: hidden;
-    border-right: .15em solid rgb(16, 53, 132); /* Blinking cursor during typing */
+    border-right: .15em solid rgb(16, 53, 132); /* Cursor will disappear later */
     white-space: nowrap;
     margin: 0 auto;
-    width: 535px;
+    width: 535px; /* Set to the width of your content */
     height: 35px;
     line-height: 0px;
-    animation: type 5s steps(40) forwards, blink-cursor .75s step-end infinite; /* Stop after last char */
+    animation: type 4s steps(40) forwards; /* Forward means stop after last letter */
 }
 
 @keyframes type {
     from { width: 0; }
-    100% { width: 530px; } /* Set the width to match the final text width */
-}
-
-@keyframes blink-cursor {
-    from, to { border-color: transparent; }
-    50% { border-color: rgb(16, 53, 132); }
+    100% { width: 530px; } /* Set to match the final text width */
 }
 
 .question {
