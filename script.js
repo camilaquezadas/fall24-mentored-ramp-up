@@ -12,6 +12,10 @@ function updateValues(swee, inst, mon) {
 function transition_question(curr_q, next_q) {
     document.getElementById(curr_q).style.display = "none"; 
     document.getElementById(next_q).style.display = "block";
+
+
+    document.getElementById("food-rec-text").style.display = "none";
+    document.getElementById("test-button").style.display = "none";
 }
 const typedContent = document.querySelector('.typed-content');
 
